@@ -12,12 +12,17 @@ public class Player : MonoBehaviour
     Vector2 minBounds;
     Vector2 maxbounds;
 
+    [SerializeField] float paddingLeft;
+    [SerializeField] float paddingRight;
+    [SerializeField] float paddingTop;
+    [SerializeField] float paddingBottom;
 
     void Start()
     {
         InitBounds();
     }
-    // Update is called once per frame
+    
+
     void Update()
     {
         this.Move();
@@ -35,8 +40,8 @@ public class Player : MonoBehaviour
         Vector2 delta = rawInput * moveSpeed * Time.deltaTime;
         Vector2 newPos = new Vector2();
 
-        newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x, maxbounds.x);
-        newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y, maxbounds.y);
+        newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxbounds.x - paddingRight);
+        newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + paddingBottom, maxbounds.y - paddingTop);
 
         transform.position = newPos;
     }
@@ -44,6 +49,5 @@ public class Player : MonoBehaviour
     void OnMove(InputValue value)
     {
         rawInput = value.Get<Vector2>(); 
-        Debug.Log(rawInput);
     }
 }
