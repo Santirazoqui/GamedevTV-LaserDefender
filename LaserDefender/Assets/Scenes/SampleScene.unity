@@ -272,6 +272,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18caff56e9f5e894fbcef9f56d068262, type: 2}
   - {fileID: 11400000, guid: 25073de0e60539149825a5449286cb3e, type: 2}
   timeBetweenWaves: 2
+  isLooping: 1
 --- !u!4 &903010589
 Transform:
   m_ObjectHideFlags: 0
@@ -389,7 +390,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5942248038227466851, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5942248038227466851, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
       propertyPath: m_LocalPosition.y
@@ -431,6 +432,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8529521854374765877, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+      propertyPath: fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529521854374765877, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+      propertyPath: isFiring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529521854374765877, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 5942248038227466851, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+    - target: {fileID: 8529521854374765877, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+      propertyPath: projectileSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529521854374765877, guid: 21120aaeca4260a418c71c0479d03534, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 1546132253145055727, guid: 47888722e8d6d8845a8c92ffdcbece94, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
