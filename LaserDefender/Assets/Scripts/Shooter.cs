@@ -41,15 +41,13 @@ public class Shooter : MonoBehaviour
         {
             GameObject laser = Instantiate(this.projectilePrefab, 
                         transform.position,
-                        Quaternion.identity,
-                        transform
+                        Quaternion.identity
                         );
             Rigidbody2D laserRigidbody = laser.GetComponent<Rigidbody2D>();
             if(laserRigidbody != null)
             {
                 laserRigidbody.velocity = transform.up * this.projectileSpeed;
             }
-            
             Destroy(laser, this.projectileLifetime);
             yield return new WaitForSeconds(this.fireRate);
         }
