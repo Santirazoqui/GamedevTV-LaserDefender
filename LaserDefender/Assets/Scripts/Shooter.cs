@@ -16,7 +16,14 @@ public class Shooter : MonoBehaviour
     [SerializeField] float minimumFireRate = 0.1f;
     
     [HideInInspector] public bool isFiring;
+
     Coroutine firingCoroutine;
+    AudioPlayer audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
+    }
 
     void Start()
     {
@@ -63,6 +70,8 @@ public class Shooter : MonoBehaviour
             float timeToNextProjectile = Random.Range(this.baseFireRate - fireRateVariance, 
                                 this.baseFireRate + fireRateVariance);
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
+
+            audioPlayer.PlayShootingClip();
 
             yield return new WaitForSeconds(timeToNextProjectile);
         }

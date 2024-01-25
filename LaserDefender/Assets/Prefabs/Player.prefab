@@ -295,6 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0fd9405ddb9de438fe61eeb4efe6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  score: 0
   health: 50
   hitEffect: {fileID: 7548221807516593691, guid: 08110ec62b7814d459acc506c6ccb4bd, type: 3}
   destroyedEffect: {fileID: 5045388256971280256, guid: 473ff014273dab6409e30ee0ba17cee5, type: 3}
