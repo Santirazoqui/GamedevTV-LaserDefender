@@ -216,10 +216,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1b7cb1a346b9a41b1db46a7eca9797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 6
   paddingLeft: 0.5
   paddingRight: 0.5
-  paddingTop: 5
+  paddingTop: 8
   paddingBottom: 2
 --- !u!50 &-2547110454790866814
 Rigidbody2D:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0fd9405ddb9de438fe61eeb4efe6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   score: 0
   health: 50
   hitEffect: {fileID: 7548221807516593691, guid: 08110ec62b7814d459acc506c6ccb4bd, type: 3}
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1546132253145055727, guid: 47888722e8d6d8845a8c92ffdcbece94, type: 3}
-  projectileSpeed: 15
+  projectileSpeed: 12
   projectileLifetime: 5
   baseFireRate: 0.2
   useAI: 0
